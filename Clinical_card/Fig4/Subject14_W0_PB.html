@@ -77,11 +77,17 @@
     justify-content: space-between;
   }
 
+  .diagnosis-tags-row {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 6px;
+  }
+
   .diagnosis-left {
     display: flex;
     align-items: center;
     gap: 10px;
-    flex-shrink: 0;
   }
 
   .avatar {
@@ -103,7 +109,6 @@
     font-weight: 700;
     color: #1a1a1a;
     margin-bottom: 2px;
-    white-space: nowrap;
   }
 
   .diagnosis-tag {
@@ -114,14 +119,13 @@
     font-weight: 600;
     padding: 3px 10px;
     border-radius: 99px;
-    text-align: center;
+    white-space: nowrap;
   }
 
   .diagnosis-sub {
     font-size: 14px;
     color: #666;
     margin-top: 1px;
-    white-space: nowrap;
   }
 
   .badge {
@@ -233,8 +237,8 @@
           <p class="diagnosis-sub">Male &nbsp;·&nbsp; Age 14</p>
         </div>
       </div>
-      <div style="display:flex; flex-direction:column; align-items:flex-end; gap:6px; min-width:0;">
-        <span class="diagnosis-tag">B Lymphoblastic Leukemia</span>
+      <div class="diagnosis-tags-row">
+        <span class="diagnosis-tag">B-ALL</span>
         <span class="badge">At diagnosis</span>
       </div>
     </div>
