@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Patient C1 — Clinical Data</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.44.0/tabler-icons.min.css">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: #F5F4F0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1rem;
+  }
+
+  .phone-frame {
+    width: 100%;
+    max-width: 420px;
+  }
+
+  .scan-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 0.7rem;
+    padding: 0 0.25rem;
+  }
+
+  .scan-icon-wrap {
+    width: 34px;
+    height: 34px;
+    border-radius: 8px;
+    background: #8B95A1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .scan-icon-wrap i {
+    font-size: 18px;
+    color: #fff;
+  }
+
+  .scan-header-text p {
+    font-size: 13px;
+    color: #999;
+  }
+
+  .scan-header-text h2 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+  }
+
+  .card {
+    background: #ffffff;
+    border-radius: 16px;
+    border: 0.5px solid rgba(0,0,0,0.12);
+    padding: 1.25rem;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+  }
+
+  /* ── Diagnosis banner ── */
+  .diagnosis-banner {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 0 0 0.9rem 0;
+    margin-bottom: 0.9rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .diagnosis-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .avatar {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: #EEEDFE;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 18px;
+    color: #3C3489;
+    flex-shrink: 0;
+  }
+
+  .diagnosis-info h1 {
+    font-size: 19px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 2px;
+  }
+
+  .diagnosis-tag {
+    display: inline-block;
+    background: #8B95A1;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 99px;
+    white-space: nowrap;
+  }
+
+  .diagnosis-sub {
+    font-size: 14px;
+    color: #666;
+    margin-top: 1px;
+  }
+
+  .badge {
+    background: #FAECE7;
+    color: #993C1D;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 99px;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .divider {
+    border: none;
+    border-top: 0.5px solid rgba(0,0,0,0.09);
+    margin: 0 0 0.8rem;
+  }
+
+  .section-label {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: #aaa;
+    margin-bottom: 0.5rem;
+  }
+
+  .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 7px 0;
+    font-size: 15px;
+  }
+
+  .row-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #888;
+  }
+
+  .row-label i { font-size: 15px; color: #bbb; }
+
+  .row-value {
+    font-weight: 600;
+    color: #1a1a1a;
+  }
+
+  .scores {
+    display: flex;
+    gap: 8px;
+    margin-top: 0.8rem;
+  }
+
+  .score-chip {
+    flex: 1;
+    background: #F1EFF8;
+    border-radius: 10px;
+    padding: 10px 12px;
+    text-align: center;
+  }
+
+  .score-chip .score-name {
+    font-size: 13px;
+    color: #7a7a9a;
+    margin-bottom: 2px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  .score-chip .score-val {
+    font-size: 30px;
+    font-weight: 700;
+    color: #3C3489;
+    line-height: 1;
+  }
+
+  .score-chip .score-note {
+    font-size: 12px;
+    color: #9a9abd;
+    margin-top: 3px;
+  }
+</style>
+</head>
+<body>
+<div class="phone-frame">
+
+  <div class="scan-header">
+    <div class="scan-icon-wrap">
+      <i class="ti ti-qrcode"></i>
+    </div>
+    <div class="scan-header-text">
+      <h2>HTM N</h2>
+      <p>Scanned from archived HTM</p>
+    </div>
+  </div>
+
+  <div class="card">
+
+    <!-- Diagnosis banner -->
+    <div class="diagnosis-banner">
+      <div class="diagnosis-left">
+        <div class="avatar">C1</div>
+        <div class="diagnosis-info">
+          <h1>Subject C1</h1>
+          <p class="diagnosis-sub">Female &nbsp;·&nbsp; Age 29</p>
+        </div>
+      </div>
+      <div style="display:flex; flex-direction:column; align-items:flex-end; gap:6px;">
+        <span class="diagnosis-tag">Disease C</span>
+        <span class="badge">Sample Status C</span>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <p class="section-label">Sample information</p>
+
+    <div class="row">
+      <span class="row-label"><i class="ti ti-flask"></i> Sample type</span>
+      <span class="row-value">BM Aspirate (Bone Marrow)</span>
+    </div>
+    <div class="row">
+      <span class="row-label"><i class="ti ti-calendar"></i> Collection date</span>
+      <span class="row-value">2025-09-12</span>
+    </div>
+
+    <hr class="divider" style="margin-top: 1rem;">
+
+    <p class="section-label">Clinical scores</p>
+
+    <div class="scores">
+      <div class="score-chip">
+        <div class="score-name">Score A</div>
+        <div class="score-val">70</div>
+      </div>
+      <div class="score-chip">
+        <div class="score-name">Score B</div>
+        <div class="score-val">5</div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+</body>
+</html>
